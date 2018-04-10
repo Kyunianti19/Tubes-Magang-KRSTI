@@ -16,6 +16,27 @@ void setup()
   digitalWrite(13, LOW);
 }
 
+void loop() 
+{
+  if (c == 'H' )
+    {
+      ledState=true;
+      digitalWrite(13, HIGH);
+    }
+    else if (c == 'L')
+    {
+      ledState=false;
+      digitalWrite(13, LOW);
+    }
+    else if ((c=='D') && (ledState))
+    {  
+//      int delayLed = Wire.read();
+      digitalWrite(13, HIGH);
+      delay (delayLed);
+      digitalWrite(13, LOW);
+      delay (delayLed);
+    }
+}
 
 // function that executes whenever data is received from master
 // this function is registered as an event, see setup()
