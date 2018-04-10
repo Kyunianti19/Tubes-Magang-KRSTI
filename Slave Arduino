@@ -7,6 +7,15 @@ char c;
 boolean ledState = false;
 int delayLed;
 
+void setup() 
+{
+  Wire.begin(7);                
+  Wire.onReceive(receiveEvent);
+
+  pinMode(13, OUTPUT);
+  digitalWrite(13, LOW);
+}
+
 
 // function that executes whenever data is received from master
 // this function is registered as an event, see setup()
