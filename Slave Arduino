@@ -1,0 +1,9 @@
+// Wire Slave Receiver
+
+#include <Wire.h>
+#include "HEADER.h"
+
+char c;
+boolean ledState = false;
+int delayLed;
+
